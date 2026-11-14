@@ -16,6 +16,9 @@ deep drop:
   at least 60 bars after the last exit, full cash.
 - **Exit (whole position):** +1.05% over the entry close, or -2.0% under it
   (safety stop), or 600 bars after entry.
+- **Fallback:** if no buy has filled by bar 1200, take one trend entry instead
+  (60-minute return ≥ +0.2%, exit +0.8% / -1.0% / 180 bars) so a quiet window
+  still trades. It never fires on the dev window.
 
 ## Dev-window result (official `grade-local`, `--driver process`)
 
